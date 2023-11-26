@@ -10,7 +10,6 @@ from bs4 import BeautifulSoup
 page = urlopen(url)
 link = BeautifulSoup(page, 'html.parser')
 print(link.title.string)
-
 meta_tags = link.find_all('meta')
 for tag in meta_tags:
     if 'content' in tag.attrs:
